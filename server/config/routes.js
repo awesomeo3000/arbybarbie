@@ -6,7 +6,7 @@ module.exports = function (app, router) {
 	var index = require('../controllers/index');
 
 	router.get('/', index.index);
-	//router.get('/partials/:partial', index.partials);
+	router.get('/partials/:partial', index.partials);
 
 	router.get('/2types', bets.findbets2types);
 
