@@ -3,7 +3,7 @@ var path = require('path');
 
 var env = process.env.NODE_ENV || 'development';
 
-var rootPath = path.resolve(__dirname + '/../');
+var rootPath = path.resolve(__dirname + '/../../');
 
 nconf
 	.argv()

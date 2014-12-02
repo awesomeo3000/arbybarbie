@@ -5,8 +5,6 @@
 */
 var express = require('express');
 
-
-
 // Express app
 var app = express();
 
@@ -14,12 +12,13 @@ var app = express();
 var router = express.Router();
 
 // Bootstrap express
-require('./config/express')(app);
+require('./server/config/express')(app);
 
 // Bootstrap schemas
-require('./config/schemas')(app);
+require('./server/config/schemas')(app);
 
 // Bootstrap routes
-require('./config/routes')(app, router);
+require('./server/config/routes')(app, router);
 
-module.exports = app;
+app.listen(8000);
+console.log('listening on port 8000');
