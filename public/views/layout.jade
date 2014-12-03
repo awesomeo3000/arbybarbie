@@ -1,14 +1,20 @@
 doctype html
 
-html(ng-app='Arbybarbie')
+html(ng-app='arbybarbie')
 	head
+		base(href='/')
 		block title
-		link(rel='stylesheet', type='text/css', href='/bootstrap/dist/css/bootstrap.min.css')
 		meta(name='viewport', content='width=device-width, user-scalable=no')
 		meta(name='viewport', content='initial-scale=1.0, maximum-scale=1.0')
+		meta(charset='utf-8')
+		link(rel='stylesheet', type='text/css', href='/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', type='text/css', href='/styles/index.min.css')
+		
 	block body
 	
 	script(type='text/javascript', src='/jquery/dist/jquery.min.js')
+	script(type="text/javascript", src="/bootstrap/dist/js/bootstrap.min.js")
 	script(type='text/javascript', src='/underscore/underscore.js')
-	script(type='text/javascript', src='angular/angular.js')
-	script(type='text/javascript', src='angular-route/angular-route.js')
+	script(type='text/javascript', src='/angular/angular.js')
+	script(type='text/javascript', src='/angular-route/angular-route.js')
+	script(type='text/javascript', src='/scripts/index.min.js')

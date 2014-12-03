@@ -14,9 +14,6 @@ var router = express.Router();
 // Bootstrap express
 require('./server/config/express')(app);
 
-// Bootstrap schemas
-require('./server/config/schemas')(app);
-
 // Bootstrap routes
 require('./server/config/routes')(app, router);
 

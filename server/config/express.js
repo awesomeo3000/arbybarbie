@@ -18,7 +18,6 @@ module.exports = function (app) {
 	}));
 
 	app.use(express.static(config.root + '/public_build'));
-	app.use(express.static(config.root + '/public'));
 	app.use(express.static(config.root + '/bower_components'));
 
 	app.engine('jade', require('jade').__express);
@@ -26,11 +25,6 @@ module.exports = function (app) {
 	app.set('views', config.root + '/public/views');
 
 	app.set('view engine', 'jade');
-
-	// // Only use logger for development environment
-	// if (process.env.NODE_ENV === 'development') {
-	// 	app.use(require('morgan')('dev'));
-	// }
 
 
 

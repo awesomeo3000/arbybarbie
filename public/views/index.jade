@@ -5,16 +5,20 @@ block title
 
 block body
 	body
-		nav(class='navbar navbar-default navbar-fixed-top' role='navigation')
-			.container
-				.navbar-header.page-scroll
-					a(class='navbar-brand page-scroll' href='#page-top')
-						| Arbybarbie
-				.collapse.navbar-collapse.navbar-ex1-collapse
-					ul.nav.navbar-nav
-						li
-							a(class='page-scroll' href='#')
-								| Home
-						li
-							a(class='page-scroll' href='#')
-								| Bet Log
+		.page-nav(ng-controller='NavCtrl')
+			nav.nav-default
+				ul
+					li(ng-repeat='page in navPages', ng-class='{active: isActive("{{page.navPath}}")}')
+						a(href='#')
+							| {{page.navDisplay}}
+			.nav-toggle
+				| Toggle
+			nav.nav-mobile
+				ul
+					li(ng-repeat='page in navPages', ng-class='{active: isActive("{{page.navPath}}")}')
+						a(href='#')
+							| {{page.navDisplay}}
+		.main-page
+			.page-body
+				ng-view
+			.page-footer
