@@ -31,15 +31,5 @@
     "undef": true,
     "unused": true,
     "trailing": true,
-    "globals": {
-        "_": true,
-        "Backbone": true,
-        "angular": true,
-        "describe": false,
-        "it": false,
-        "before": false,
-        "beforeEach": false,
-        "after": false,
-        "afterEach": false
-    }
+    "predef": ["angular", "$"]
 }

@@ -9,14 +9,16 @@ block body
 			nav.nav-default
 				ul
 					li(ng-repeat='page in navPages', ng-class='{active: isActive("{{page.navPath}}")}')
-						a(href='#')
+						a(href='{{page.navPath}}')
 							| {{page.navDisplay}}
 			.nav-toggle
 				| Toggle
+				span
+					i.fa.fa-bars
 			nav.nav-mobile
 				ul
 					li(ng-repeat='page in navPages', ng-class='{active: isActive("{{page.navPath}}")}')
-						a(href='#')
+						a(href='{{page.navPath}}')
 							| {{page.navDisplay}}
 		.main-page
 			.page-body

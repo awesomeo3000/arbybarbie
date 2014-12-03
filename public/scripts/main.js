@@ -1,5 +1,3 @@
-/*global $:false */
-
 $(document).ready(function () {
 	$('.nav-toggle').click(function () {
 		if ($('.nav-mobile ul').hasClass('expanded')) {
