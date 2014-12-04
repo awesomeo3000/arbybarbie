@@ -12,9 +12,8 @@ block body
 						a(href='{{page.navPath}}')
 							| {{page.navDisplay}}
 			.nav-toggle
-				| Toggle
-				span
-					i.fa.fa-bars
+				span.pull-right
+					i.fa.fa-bars.fa-2x
 			nav.nav-mobile
 				ul
 					li(ng-repeat='page in navPages', ng-class='{active: isActive("{{page.navPath}}")}')
