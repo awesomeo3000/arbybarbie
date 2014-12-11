@@ -1,8 +1,7 @@
 {
-  "name": "arbybarbie",
+  "name": "newsfeed",
   "main": "index.js",
   "version": "0.0.0",
-  "homepage": "https://github.com/awesomeo3000/arbybarbie",
   "authors": [
     "kris <kristjanj11@ru.is>"
   ],

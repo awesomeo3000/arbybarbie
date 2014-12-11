@@ -1,7 +1,7 @@
 {
 	"db": {
 		"local": {
-			"URI": "mongodb://localhost/arb_betting"
+			"URI": "mongodb://localhost/newsfeed"
 		}
 	}
 }

@@ -1,20 +1,12 @@
 extends layout
 
 block title
-	title Arbybarbie
+	title NewsFeed
 
 block body
 	body
 		.page-nav(ng-controller='NavCtrl')
 			nav.nav-default
-				ul
-					li(ng-repeat='page in navPages', ng-class='{active: isActive("{{page.navPath}}")}')
-						a(href='{{page.navPath}}')
-							| {{page.navDisplay}}
-			.nav-toggle
-				span.pull-right
-					i.fa.fa-bars.fa-2x
-			nav.nav-mobile
 				ul
 					li(ng-repeat='page in navPages', ng-class='{active: isActive("{{page.navPath}}")}')
 						a(href='{{page.navPath}}')
