@@ -1,23 +1,20 @@
 'use strict';
 
-angular.module('arbybarbie', ['ngRoute'])
+angular.module('newsfeed', ['ngRoute'])
 
 .config(['$routeProvider', '$locationProvider',
 	function ($routeProvider, $locationProvider) {
 		$routeProvider
-			.when('/', {
-				redirectTo: '/home'
+			.when('/viewposts', {
+				templateUrl: '/partials/viewposts',
+				controller: 'ViewPostsCtrl'
 			})
-			.when('/home', {
-				templateUrl: '/partials/home',
-				controller: 'HomeCtrl'
-			})
-			.when('/betlog', {
-				templateUrl: '/partials/betlog',
-				controller: 'BetLogCtrl'
+			.when('/createpost', {
+				templateUrl: '/partials/createpost',
+				controller: 'CreatePostCtrl'
 			})
 			.otherwise({
-				redirectTo: '/home'
+				redirectTo: '/createpost'
 			});
 
 		$locationProvider.html5Mode(true);

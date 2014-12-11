@@ -2,15 +2,13 @@
 
 module.exports = function (app, router) {
 
-	var bets = require('../controllers/bets/index');
 	var index = require('../controllers/index');
+	var blog = require('../controllers/blog/index');
 
-	router.get('/', index.index);
 	router.get('/partials/:partial', index.partials);
 
-	router.get('/2types', bets.findbets2types);
-
-	router.get('/3types', bets.findbets3types);
+	router.post('/saveblog', blog.saveBlog);
+	router.get('/getblogs', blog.getBlogs);
 
 	router.get('*', index.index);
 

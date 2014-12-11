@@ -1,20 +1,18 @@
 'use strict';
 
-angular.module('arbybarbie').controller('NavCtrl', [
+angular.module('newsfeed').controller('NavCtrl', [
 	'$scope',
 	'$location',
 	function ($scope, $location) {
 		$scope.navPages = [{
-			navDisplay: 'Home',
-			navPath: '/home'
+			navDisplay: 'Create Post',
+			navPath: '/createposts'
 		}, {
-			navDisplay: 'Bet Log',
-			navPath: '/betlog'
+			navDisplay: 'View Posts',
+			navPath: '/viewposts'
 		}];
 
 		$scope.isActive = function (path) {
-			console.log('path is', path);
-			console.log('location is', $location.path());
 			return path === $location.path();
 		};
 

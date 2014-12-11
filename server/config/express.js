@@ -6,9 +6,6 @@ var config = require('./config');
 
 module.exports = function (app) {
 
-	// Add configuration to the app so it will be accessible with app.get('config') and require(/* Path to config */)
-	app.set('config', require('./config'));
-
 	// Parse body
 	app.use(bodyParser.json());
 
@@ -17,8 +14,8 @@ module.exports = function (app) {
 		extended: true
 	}));
 
-	app.use(express.static(config.root + '/public_build'));
-	app.use(express.static(config.root + '/bower_components'));
+	app.use(express.static(app.get('config').root + '/public_build'));
+	app.use(express.static(app.get('config').root + '/bower_components'));
 
 	app.engine('jade', require('jade').__express);
 

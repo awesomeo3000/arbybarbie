@@ -1,0 +1,36 @@
+.create-container
+	.create-form
+		.create-heading.text-center
+			h2
+				| Whats on your mind?
+		form(name='createForm', novalidate, ng-submit='createForm.$valid && savePost()')
+			.create-field
+				.create-label
+					| Author:
+				.create-input
+					input(ng-model='currentPost.author', name='author', required='')
+			.create-formerrors(ng-show='createForm.$submitted || createForm.author.$touched')
+				.create-formerror(ng-show='createForm.author.$error.required')
+					| Please enter your name
+			.create-field
+				.create-label
+					| Title:
+				.create-input 
+					input(ng-model='currentPost.title', name='title', required='')
+			.create-formerrors(ng-show='createForm.$submitted || createForm.title.$touched')
+				.create-formerror(ng-show='createForm.title.$error.required')
+					| Please enter a title
+			.create-field
+				.create-label
+					| Content:
+				.create-input
+					textarea(ng-model='currentPost.content', name='content', required='')
+			.create-formerrors(ng-show='createForm.$submitted || createForm.content.$touched')
+				.create-formerror(ng-show='createForm.content.$error.required')
+					| Please enter some content
+			.create-submit.pull-right
+				input.btn.btn-submit(type='submit', value='Post to newsfeed', ng-disabled='saving')
+//- .data
+//- 	| {{currentPost}}
+//- .success
+//- 	| {{success}}
